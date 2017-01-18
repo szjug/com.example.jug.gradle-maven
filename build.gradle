@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "com.example.jug.gradlemaven.MainClass"
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+repositories {
+    //mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'ch.qos.logback:logback-classic:1.1.8'
+}
