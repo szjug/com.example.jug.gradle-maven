@@ -1,6 +1,13 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
 mainClassName = "com.example.jug.gradlemaven.MainClass"
 
 jar {
@@ -16,3 +23,4 @@ repositories {
 dependencies {
     compile 'ch.qos.logback:logback-classic:1.1.8'
 }
+
